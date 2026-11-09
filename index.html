@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0 A 100K | Academia de Negócios</title>
+
+<style>
+:root {
+  --bg:#080b09;
+  --card:#111713;
+  --green:#8dff7a;
+  --gold:#d4af6a;
+  --white:#f5f7f5;
+  --muted:#9ba69d;
+  --border:#27332a;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  background:var(--bg);
+  color:var(--white);
+  font-family:Arial, sans-serif;
+}
+
+button,input,textarea {
+  font:inherit;
+}
+
+button {
+  cursor:pointer;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#080b09ed;
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(15px);
+}
+
+.nav {
+  max-width:1200px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo {
+  font-size:21px;
+  font-weight:900;
+}
+
+.logo span {
+  color:var(--green);
+}
+
+nav {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+nav a {
+  color:var(--muted);
+  text-decoration:none;
+  font-size:13px;
+}
+
+nav a:hover {
+  color:var(--green);
+}
+
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+.hero {
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(90deg,#080b09 15%,#080b09d9 50%,#080b0940),
+  url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600')
+  center/cover;
+}
+
+.hero-content {
+  max-width:720px;
+}
+
+.tag {
+  display:inline-block;
+  color:var(--green);
+  background:#8dff7a15;
+  border:1px solid #8dff7a55;
+  border-radius:30px;
+  padding:9px 15px;
+  font-size:12px;
+  margin-bottom:22px;
+}
+
+h1 {
+  font-size:clamp(38px,6vw,70px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
+
+h1 span {
+  color:var(--green);
+}
+
+p {
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.btn {
+  display:inline-block;
+  border:0;
+  border-radius:9px;
+  padding:14px 22px;
+  font-weight:bold;
+  text-decoration:none;
+  margin:8px 5px 0 0;
+}
+
+.primary {
+  background:var(--green);
+  color:#071007;
+}
+
+.secondary {
+  border:1px solid var(--border);
+  color:white;
+  background:var(--card);
+}
+
+.section-title {
+  margin-bottom:30px;
+}
+
+.section-title h2 {
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.section-title span {
+  color:var(--green);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:15px;
+  overflow:hidden;
+  transition:.2s;
+}
+
+.card:hover {
+  transform:translateY(-4px);
+  border-color:var(--green);
+}
+
+.card img {
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:20px;
+}
+
+.card h3 {
+  margin-bottom:10px;
+}
+
+.card p {
+  font-size:13px;
+}
+
+.green {
+  color:var(--green);
+}
+
+.gold {
+  color:var(--gold);
+}
+
+.muted {
+  color:var(--muted);
+}
+
+.progress {
+  height:9px;
+  background:#27332a;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:12px;
+}
+
+.progress-bar {
+  height:100%;
+  width:0%;
+  background:var(--green);
+  transition:.3s;
+}
+
+input,textarea {
+  width:100%;
+  padding:13px;
+  background:#080b09;
+  color:white;
+  border:1px solid var(--border);
+  border-radius:8px;
+  margin-top:8px;
+}
+
+textarea {
+  min-height:100px;
+  resize:vertical;
+}
+
+footer {
+  padding:40px 20px;
+  text-align:center;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+
+@media(max-width:700px) {
+  .nav {
+    flex-direction:column;
+  }
+
+  nav {
+    justify-content:center;
+  }
+
+  .container {
+    padding:35px 15px;
+  }
+
+  .hero {
+    min-height:450px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">0 A <span>100K</span></div>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#nichos">Nichos</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#entrar">Entrar grátis</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div class="tag">ACADEMIA 100% GRATUITA</div>
+
+    <h1>
+      CONSTRUA SEU NEGÓCIO
+      <span>DO ZERO A 100K</span>
+    </h1>
+
+    <p>
+      Aprenda negócios, inteligência artificial,
+      marketing digital, vendas e gestão empresarial.
+      Conhecimento prático para transformar ideias em projetos reais.
+    </p>
+
+    <a href="#aulas" class="btn primary">
+      EXPLORAR AS AULAS
+    </a>
+
+    <a href="#nichos" class="btn secondary">
+      ESCOLHER MEU NICHO
+    </a>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h2>Seu progresso</h2>
+    <p>Acompanhe suas aulas concluídas.</p>
+  </div>
+
+  <h3 id="progressText">0 de 50 aulas concluídas</h3>
+
+  <div class="progress">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+</section>
+
+<section class="container" id="nichos">
+  <div class="section-title">
+    <h2>Escolha seu <span>nicho</span></h2>
+    <p>Encontre oportunidades em diferentes mercados.</p>
+  </div>
+
+  <div class="grid" id="nicheGrid"></div>
+
+  <div id="nicheDetails" class="card-content" style="margin-top:25px">
+    <h2 id="nicheTitle">Selecione um nicho</h2>
+    <p id="nicheDesc">Escolha uma categoria para ver sua estratégia.</p>
+    <div id="nicheExtra"></div>
+  </div>
+</section>
+
+<section class="container" id="aulas">
+  <div class="section-title">
+    <h2>Academia de <span>conhecimento</span></h2>
+    <p>50 aulas organizadas para desenvolver suas habilidades empresariais.</p>
+  </div>
+
+  <div id="lessonGrid" class="grid"></div>
+</section>
+
+<section class="container" id="calculadora">
+  <div class="section-title">
+    <h2>Calculadora de <span>faturamento</span></h2>
+    <p>Simule cenários de vendas para seu negócio.</p>
+  </div>
+
+  <div class="card card-content">
+    <label>Preço de venda (R$)</label>
+    <input id="price" type="number" min="0" value="97">
+
+    <label>Vendas por mês</label>
+    <input id="sales" type="number" min="0" value="20">
+
+    <h2 class="green" id="monthlyResult">R$ 1.940,00</h2>
+    <p id="annualResult">Faturamento estimado em 12 meses.</p>
+
+    <button class="btn primary" onclick="calculate()">
+      CALCULAR
+    </button>
+  </div>
+</section>
+
+<section class="container" id="entrar">
+  <div class="section-title">
+    <h2>Entre na <span>academia</span></h2>
+    <p>Cadastre-se gratuitamente para acompanhar seu aprendizado.</p>
+  </div>
+
+  <div class="card card-content">
+    <form id="registerForm">
+      <label>Seu nome</label>
+      <input id="userName" required placeholder="Digite seu nome">
+
+      <label>Seu e-mail</label>
+      <input id="userEmail" type="email" required placeholder="Digite seu e-mail">
+
+      <button class="btn primary" type="submit">
+        ENTRAR GRATUITAMENTE
+      </button>
+    </form>
+
+    <p id="registerMessage"></p>
+  </div>
+</section>
+
+<footer>
+  <h2>0 A <span class="green">100K</span></h2>
+  <p>Academia de Negócios e Inteligência Artificial</p>
+  <p>Conhecimento, estratégia e execução.</p>
+
+  <button class="btn secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    VOLTAR AO TOPO
+  </button>
+</footer>
